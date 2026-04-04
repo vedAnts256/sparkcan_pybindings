@@ -18,7 +18,9 @@ PYBIND11_MODULE(_sparkcan, m) {
         .def("SetPosition", &SparkBase::SetPosition, py::arg("position"), guard())
         .def("SetVelocity", &SparkBase::SetVelocity, py::arg("velocity"), guard())
         .def("GetAbsoluteEncoderPosition", &SparkBase::GetAbsoluteEncoderPosition, guard())
+        .def("GetPosition", &SparkBase::GetPosition, guard())
         .def("GetVelocity", &SparkBase::GetVelocity, guard())
+        .def("SetPeriodicStatus2Period", &SparkBase::SetPeriodicStatus2Period, py::arg("period"), guard())
         .def("Heartbeat", &SparkBase::Heartbeat, guard())
         .def("heartbeat", &SparkBase::Heartbeat, guard());  // alias
 
